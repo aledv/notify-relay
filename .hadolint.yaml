@@ -1,0 +1,2 @@
+# Dockerfile linter, run in CI. The base image is pinned by digest.
+failure-threshold: warning

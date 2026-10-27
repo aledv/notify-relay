@@ -1,0 +1,10 @@
+# Python linter, run in CI before the tests. Locally: ruff check . && ruff format --check .
+line-length = 120
+target-version = "py310"
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[lint.flake8-bugbear]
+# FastAPI declares parameters with File()/Form() as defaults: that's the intended usage
+extend-immutable-calls = ["fastapi.File", "fastapi.Form", "fastapi.Query", "fastapi.Depends"]

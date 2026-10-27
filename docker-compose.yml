@@ -1,0 +1,11 @@
+services:
+  notify-relay:
+    image: ghcr.io/aledv/notify-relay:latest   # pin a tag (or tag@sha256) in production
+    container_name: notify-relay
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "5000:5000"
+    # optional, with LOG_FILE=/logs/notify.log in .env:
+    # volumes:
+    #   - ./data:/logs
