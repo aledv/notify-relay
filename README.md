@@ -1,5 +1,7 @@
 # notify-relay
 
+[![CI](https://github.com/aledv/notify-relay/actions/workflows/image.yml/badge.svg)](https://github.com/aledv/notify-relay/actions/workflows/image.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Image](https://img.shields.io/badge/ghcr.io-notify--relay-2496ED?logo=docker&logoColor=white)](https://github.com/aledv/notify-relay/pkgs/container/notify-relay)
+
 A tiny self-hosted HTTP service that forwards notifications to **Telegram** and/or **email**.
 
 Your scripts, cron jobs and home-lab services POST a message (and optionally a file) to one
@@ -68,6 +70,10 @@ hadolint --config .hadolint.yaml Dockerfile          # Dockerfile linter
 
 CI (`.github/workflows/image.yml`) runs the linters, then the tests, then publishes the image to
 `ghcr.io/aledv/notify-relay` (`<short sha>` and `latest`).
+
+## Contributing
+
+Issues and pull requests are welcome. Please run the linters and tests (see [Development](#development)) before opening a pull request.
 
 ## License
 
